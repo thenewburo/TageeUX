@@ -40,6 +40,15 @@
 				});
 				return false;
 			});
+			
+			
+			// 
+			$('.view-section li a').click(function(){
+				var newLink = $(this).html();
+				$(".view span").html(newLink);
+				return false;
+			});
+			
 		});
 			
 		</script>
@@ -50,43 +59,54 @@
 
 <div id="container-fluid">
 
-<!--header start -->
-<div id="header-wrap">
-	<div class="content-width">
-        <header id="header" class="clearfix">
-            <div id="logo">
-            	<a href="#"><img src="images/logo.png" alt=""></a>
-            </div>
-            <div id="nav">
-            	<ul class="clearfix">
-                	<ul>
-                    	<li><a href="#">Tour</a></li>
-                        <li><a href="#">Latest Hashtags</a></li>
-                        <li><a href="#">Login / Sign-up</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </header>
-    </div>
-</div>
-<!--header end -->
+<div id="wrapper">
 
+	<!--header start -->
+    <div id="header-wrap">
+        <div class="content-width">
+            <header id="header" class="clearfix">
+                <div id="logo">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div id="nav">
+                    <ul class="clearfix">
+                        <ul>
+                            <li><a href="#">Tour</a></li>
+                            <li><a href="#">Latest Hashtags</a></li>
+                            <li><a href="#">Login / Sign-up</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </header>
+        </div>
+    </div>
+	<!--header end -->
+
+
+    <div id="main-wrap">
+        <div class="content-width">
+            <div id="main" class="clearfix">
+                
+                <div class="title-section">
+                    <h1>
+                        <span class="block">Search and Chat about Pop Culture and </span>
+                        the latest on Social Media
+                    </h1>
+                </div>
+                <div class="search-section">
+                    <input type="text" value="# Hashtags" class="field">
+                    <input type="submit" value="" class="submit">
+                </div>
+            </div>
+        </div>
+    </div>            
+</div>
 
 <!--main start -->
-<div id="main-wrap">
+<div id="">
 	<div class="content-width">
-        <div id="main" class="clearfix">
+        <div id="" class="clearfix">
         	
-            <div class="title-section">
-            	<h1>
-                	<span class="block">Search and Chat about Pop Culture and </span>
-                    the latest on Social Media
-                </h1>
-            </div>
-            <div class="search-section">
-            	<input type="text" value="# Hashtags" class="field">
-                <input type="submit" value="" class="submit">
-            </div>
             
             <div class="wrap clearfix">
             	<div class="contents">
@@ -95,6 +115,12 @@
                         
                         <div class="view-section">
                         	<a href="#" class="view"><span>View all</span></a>
+                            <ul>
+                            	<li><a href="#">View all</a></li>
+                            	<li><a href="#">View 1</a></li>
+                                <li><a href="#">View 2</a></li>
+                                <li><a href="#">View 3</a></li>
+                            </ul>
                         </div>
                         
                     </div>
@@ -255,6 +281,11 @@
                             </li>
                         </ul>
                     </div>
+                    
+                    <div class="search-wrap">
+                        <a href="#"><img src="images/search.png" alt=""></a>
+                    </div>
+                    
                 </div><!--contents -->
                 
                 <div class="sidebar">
@@ -337,53 +368,55 @@
                 </div><!--sidebar -->
             </div><!--wrap -->
             
-            <div class="search-wrap">
-            	<a href="#"><img src="images/search.png" alt=""></a>
-            </div>
             
         </div>
     </div>
 </div>
 <!--main end -->
 
-<div class="tags-wrap">
-	<a href="#" class="more-tag">more tagspots</a>
-    <a href="#" class="add"><img src="images/add.png" alt=""></a>
-	<div class="content-width">
-    	<div class="strip-black">
-        	<ul class="clearfix">
-            	<li><a href="#">#fashion</a></li>
-                <li><a href="#">#friends</a></li>
-                <li><a href="#">#like4like</a></li>
-                <li><a href="#">#smile</a></li>
-                <li><a href="#">#instamood</a></li>
-                <li><a href="#">#family</a></li>       
+
+<div class="wrapper-bot">
+
+    <div class="tags-wrap">
+        <a href="#" class="more-tag">more tagspots</a>
+        <!--<a href="#" class="add"><img src="images/add.png" alt=""></a> -->
+        <div class="content-width">
+            <div class="strip-black">
+                <ul class="clearfix">
+                    <li><a href="#">#fashion</a></li>
+                    <li><a href="#">#friends</a></li>
+                    <li><a href="#">#like4like</a></li>
+                    <li><a href="#">#smile</a></li>
+                    <li><a href="#">#instamood</a></li>
+                    <li><a href="#">#family</a></li>       
+                </ul>
+            </div>
+        </div>
+    </div><!--tags-wrap -->
+
+    <div class="content-width">
+        <div class="footer-links">
+            <ul class="clearfix">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Agreement</a></li>
             </ul>
         </div>
     </div>
-</div><!--tags-wrap -->
-
-<div class="content-width">
-    <div class="footer-links">
-    	<ul class="clearfix">
-        	<li><a href="#">Contact</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Agreement</a></li>
-        </ul>
-    </div>
-</div>
 
 
 
 <!--footer start -->
-<div id="footer-wrap">
-	<div class="content-width">
-        <footer id="footer" class="clearfix">
-            <a href="#"><img src="images/footer-logo.png" alt=""></a>
-        </footer>
+    <div id="footer-wrap">
+        <div class="content-width">
+            <footer id="footer" class="clearfix">
+                <a href="#"><img src="images/footer-logo.png" alt=""></a>
+            </footer>
+        </div>
     </div>
-</div>
 <!--footer end -->
+
+</div>
 
 </div><!--container-fluid -->
 
