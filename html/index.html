@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Home Page</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+		$(function () {
+			$('.overlay').click(function(){
+				var newGallery = $(this).attr('href');
+				$('#large_photo').fadeOut(function(){
+					$(this).attr('src', newGallery).fadeIn();
+				});
+				return false;
+			});
+		});
+			
+		</script>
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="content-width">
+        <header id="header" class="clearfix">
+            <div id="logo">
+            	<a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div id="nav">
+            	<ul class="clearfix">
+                	<ul>
+                    	<li><a href="#">Tour</a></li>
+                        <li><a href="#">Latest Hashtags</a></li>
+                        <li><a href="#">Login / Sign-up</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+
+<!--main start -->
+<div id="main-wrap">
+	<div class="content-width">
+        <div id="main" class="clearfix">
+        	
+            <div class="title-section">
+            	<h1>
+                	<span class="block">Search and Chat about Pop Culture and </span>
+                    the latest on Social Media
+                </h1>
+            </div>
+            <div class="search-section">
+            	<input type="text" value="# Hashtags" class="field">
+                <input type="submit" value="" class="submit">
+            </div>
+            
+            <div class="wrap clearfix">
+            	<div class="contents">
+                	<div class="join-wrap clearfix">
+                    	<a href="#" class="join">Join a Tagspot</a>
+                        
+                        <div class="view-section">
+                        	<a href="#" class="view"><span>View all</span></a>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="gallery-block-wrap clearfix">
+                    	<div class="gallery-block-left">
+                            <div class="gallery-section">
+                                <ul class="clearfix">
+                                    <li>
+                                        <div class="frame">
+                                            <div class="frame-inner">
+                                                <img src="images/img-1.jpg" alt="" class="frame-img">
+                                                <a href="images/img-1.jpg" class="overlay">
+                                                    <img src="images/comment-plus.png" alt="">
+                                                </a>
+                                                <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                                <span class="frame-tag">#hashtag</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="frame">
+                                            <div class="frame-inner">
+                                                <img src="images/img-2.jpg" alt="" class="frame-img">
+                                                <a href="images/img-2.jpg" class="overlay">
+                                                    <img src="images/comment-plus.png" alt="">
+                                                </a>
+                                                <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                                <span class="frame-tag">#hashtag</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+                        
+                        <div class="gallery-block-right">
+                        	<div class="frame">
+                                <div class="frame-inner">
+                                    <img src="images/img-1.jpg" alt="" class="frame-img" id="large_photo">
+                                    <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                    <span class="frame-tag">#hashtag</span>
+                                    <img class="arrow" src="images/arrow-right.png" alt="">
+                                </div>
+                            </div>
+                        </div>        
+                    </div><!--gallery-block-wrap -->
+                    
+                    <div class="gallery-section">
+                    	<ul class="clearfix">
+                        	<li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-1.jpg" alt="" class="frame-img">
+                                        <a href="images/img-1.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-2.jpg" alt="" class="frame-img">
+                                        <a href="images/img-2.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-3.jpg" alt="" class="frame-img">
+                                        <a href="images/img-3.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-3.jpg" alt="" class="frame-img">
+                                        <a href="images/img-3.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-4.jpg" alt="" class="frame-img">
+                                        <a href="images/img-4.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-1.jpg" alt="" class="frame-img">
+                                        <a href="images/img-1.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-4.jpg" alt="" class="frame-img">
+                                        <a href="images/img-4.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-3.jpg" alt="" class="frame-img">
+                                        <a href="images/img-3.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="frame">
+                                	<div class="frame-inner">
+                                        <img src="images/img-2.jpg" alt="" class="frame-img">
+                                        <a href="images/img-2.jpg" class="overlay">
+                                            <img src="images/comment-plus.png" alt="">
+                                        </a>
+                                        <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                        <span class="frame-tag">#hashtag</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--contents -->
+                
+                <div class="sidebar">
+                	<div class="title">
+                    	<img src="images/comment-title.png" alt="">
+                        <span>Tagspot : #hashtag</span>
+                    </div>
+                    <div class="sidebar-inner">
+                    
+                    	<div class="message-section clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-section message-left clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_woman2.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-section clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                    </div><!--sidebar-inner -->
+                    <div class="channel-wrap">
+                        <a href="#">CHANNEL ICON</a>
+                    </div>
+                    <div class="sidebar-bot">
+                    	<input type="text" value="" class="field-comment">
+                    </div>
+                </div><!--sidebar -->
+            </div><!--wrap -->
+            
+            <div class="search-wrap">
+            	<a href="#"><img src="images/search.png" alt=""></a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+<div class="tags-wrap">
+	<a href="#" class="more-tag">more tagspots</a>
+    <a href="#" class="add"><img src="images/add.png" alt=""></a>
+	<div class="content-width">
+    	<div class="strip-black">
+        	<ul class="clearfix">
+            	<li><a href="#">#fashion</a></li>
+                <li><a href="#">#friends</a></li>
+                <li><a href="#">#like4like</a></li>
+                <li><a href="#">#smile</a></li>
+                <li><a href="#">#instamood</a></li>
+                <li><a href="#">#family</a></li>       
+            </ul>
+        </div>
+    </div>
+</div><!--tags-wrap -->
+
+<div class="content-width">
+    <div class="footer-links">
+    	<ul class="clearfix">
+        	<li><a href="#">Contact</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Agreement</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+            <a href="#"><img src="images/footer-logo.png" alt=""></a>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+</body>
+</html>

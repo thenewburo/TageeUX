@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Landing</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+		$(function () {
+			$('.overlay').click(function(){
+				var newGallery = $(this).attr('href');
+				$('#large_photo').fadeOut(function(){
+					$(this).attr('src', newGallery).fadeIn();
+				});
+				return false;
+			});
+		});
+			
+		</script>
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="content-width">
+        <header id="header" class="clearfix">
+            <div id="logo">
+            	<a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div id="nav">
+            	<ul class="clearfix">
+                	<ul>
+                    	<li><a href="#">Tour</a></li>
+                        <li><a href="#">Latest Hashtags</a></li>
+                        <li><a href="#">Login / Sign-up</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+<div class="landing-wrap">
+	<div class="content-width">
+    	
+        <div class="landing-desc">
+        	<span class="block">Never miss out on chatrooms that make </span>
+            <span class="block">you laugh, cry and think about what's really </span>
+            trending on social media  
+        </div>
+        
+        <div class="btn-section">
+        	<a href="#"><img src="images/login.png" alt=""></a>
+            <a href="#"><img src="images/take-tour.png" alt=""></a>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="tags-wrap mt-30">
+	<a href="#" class="more-tag">more tagspots</a>
+    <a href="#" class="add"><img src="images/add.png" alt=""></a>
+	<div class="content-width">
+    	<div class="strip-black">
+        	<ul class="clearfix">
+            	<li><a href="#">#fashion</a></li>
+                <li><a href="#">#friends</a></li>
+                <li><a href="#">#like4like</a></li>
+                <li><a href="#">#smile</a></li>
+                <li><a href="#">#instamood</a></li>
+                <li><a href="#">#family</a></li>       
+            </ul>
+        </div>
+    </div>
+</div><!--tags-wrap -->
+
+<div class="content-width">
+    <div class="footer-links">
+    	<ul class="clearfix">
+        	<li><a href="#">Contact</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Agreement</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+            <a href="#"><img src="images/footer-logo.png" alt=""></a>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+</body>
+</html>
