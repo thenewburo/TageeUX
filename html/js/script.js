@@ -1,5 +1,21 @@
 $(function () {
 	
+// menu for mobile
+	$('#menu').click(function(){
+		if( $(this).hasClass('active') ){
+			$(this).removeClass('active');
+			$(this).next('ul').stop(true,true).slideUp();
+		}
+		else{
+			$(this).addClass('active');
+			$(this).next('ul').stop(true,true).slideDown();
+		}
+		
+		return false;
+	});
+	
+
+	
 	$('.popup-link').click(function(){
 		var newContents = $(this).attr('href');
 		$(".overlay-popup").fadeIn();
@@ -25,6 +41,10 @@ $(function () {
 	
 // view on dropdown	
 	$('.view-section li a').click(function(){
+		$(".view-section li a").removeClass('active');
+		$(this).addClass('active');
+		
+		
 		var newLink = $(this).html();
 		$(".view span").html(newLink);
 		return false;

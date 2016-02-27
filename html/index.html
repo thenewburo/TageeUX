@@ -35,13 +35,6 @@
     
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-		$(function () {
-			
-			
-		});
-			
-		</script>
     
 </head>
 
@@ -59,12 +52,15 @@
                     <a href="#"><img src="images/logo.png" alt=""></a>
                 </div>
                 <div id="nav">
+                	<a href="#" id="menu">
+                    	<span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
                     <ul class="clearfix">
-                        <ul>
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#popup-galelry" class="popup-link">Latest Hashtags</a></li>
-                            <li><a href="#popup-login" class="popup-link">Login / Sign-up</a></li>
-                        </ul>
+                        <li><a href="#">Tour</a></li>
+                        <li><a href="#popup-galelry" class="popup-link">Latest Hashtags</a></li>
+                        <li><a href="#popup-login" class="popup-link">Login / Sign-up</a></li>
                     </ul>
                 </div>
             </header>
@@ -99,6 +95,86 @@
         	
             
             <div class="wrap clearfix">
+            	
+                <div class="sidebar">
+                	<div class="title">
+                    	<img src="images/comment-title.png" alt="">
+                        <span>Tagspot : #hashtag</span>
+                    </div>
+                    <div class="sidebar-inner">
+                    
+                    	<div class="message-section clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-section message-left clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_woman2.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                        <div class="message-section clearfix">
+                        	<div class="msg-date">10/10/16</div>
+                            <div class="msg-info-wrap clearfix clearfix">
+                            	<div class="msg-info">
+                                	<div class="in-top clearfix">
+                                    	<div class="like-section">
+                                        	<a href="#">+3</a>
+                                            <a href="#" class="like"><span></span></a>
+                                            <a href="#" class="dislike"><span></span></a>
+                                        </div>
+                                        <div class="msg-name">username</div>
+                                    </div>
+                                    <div class="text-contain">
+                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
+                                        tesque sit amet enim ac lacus con
+                                    </div>
+                                </div>
+                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        
+                    </div><!--sidebar-inner -->
+                    <div class="channel-wrap">
+                        <a href="#">CHANNEL ICON</a>
+                    </div>
+                    <div class="sidebar-bot">
+                    	<input type="text" value="" class="field-comment">
+                    </div>
+                </div><!--sidebar -->
+                
             	<div class="contents">
                 	<div class="join-wrap clearfix">
                     	<a href="#" class="join">Join a Tagspot</a>
@@ -106,7 +182,7 @@
                         <div class="view-section">
                         	<a href="#" class="view"><span>View all</span></a>
                             <ul>
-                            	<li><a href="#">View all</a></li>
+                            	<li><a href="#" class="active">View all</a></li>
                             	<li><a href="#">View 1</a></li>
                                 <li><a href="#">View 2</a></li>
                                 <li><a href="#">View 3</a></li>
@@ -116,6 +192,18 @@
                     </div>
                     
                     <div class="gallery-block-wrap clearfix">
+                    	
+                        <div class="gallery-block-right">
+                        	<div class="frame">
+                                <div class="frame-inner">
+                                    <img src="images/img-1.jpg" alt="" class="frame-img" id="large_photo">
+                                    <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
+                                    <span class="frame-tag">#hashtag</span>
+                                    <img class="arrow" src="images/arrow-right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
                     	<div class="gallery-block-left">
                             <div class="gallery-section">
                                 <ul class="clearfix">
@@ -146,17 +234,7 @@
                                 </ul>
                             </div>
                         </div>    
-                        
-                        <div class="gallery-block-right">
-                        	<div class="frame">
-                                <div class="frame-inner">
-                                    <img src="images/img-1.jpg" alt="" class="frame-img" id="large_photo">
-                                    <div class="comment-frmae"><img src="images/comment.png" alt=""> <span>6</span></div>
-                                    <span class="frame-tag">#hashtag</span>
-                                    <img class="arrow" src="images/arrow-right.png" alt="">
-                                </div>
-                            </div>
-                        </div>        
+                                
                     </div><!--gallery-block-wrap -->
                     
                     <div class="gallery-section">
@@ -273,89 +351,10 @@
                     </div>
                     
                     <div class="search-wrap">
-                        <a href="#"><img src="images/search.png" alt=""></a>
+                        <a href="#"><img src="images/show-more.png" alt=""></a>
                     </div>
                     
                 </div><!--contents -->
-                
-                <div class="sidebar">
-                	<div class="title">
-                    	<img src="images/comment-title.png" alt="">
-                        <span>Tagspot : #hashtag</span>
-                    </div>
-                    <div class="sidebar-inner">
-                    
-                    	<div class="message-section clearfix">
-                        	<div class="msg-date">10/10/16</div>
-                            <div class="msg-info-wrap clearfix clearfix">
-                            	<div class="msg-info">
-                                	<div class="in-top clearfix">
-                                    	<div class="like-section">
-                                        	<a href="#">+3</a>
-                                            <a href="#" class="like"><span></span></a>
-                                            <a href="#" class="dislike"><span></span></a>
-                                        </div>
-                                        <div class="msg-name">username</div>
-                                    </div>
-                                    <div class="text-contain">
-                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
-                                        tesque sit amet enim ac lacus con
-                                    </div>
-                                </div>
-                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
-                            </div>
-                        </div>
-                        
-                        <div class="message-section message-left clearfix">
-                        	<div class="msg-date">10/10/16</div>
-                            <div class="msg-info-wrap clearfix clearfix">
-                            	<div class="msg-info">
-                                	<div class="in-top clearfix">
-                                    	<div class="like-section">
-                                        	<a href="#">+3</a>
-                                            <a href="#" class="like"><span></span></a>
-                                            <a href="#" class="dislike"><span></span></a>
-                                        </div>
-                                        <div class="msg-name">username</div>
-                                    </div>
-                                    <div class="text-contain">
-                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
-                                        tesque sit amet enim ac lacus con
-                                    </div>
-                                </div>
-                                <div class="msg-user"><img src="images/tagee_woman2.jpg" alt=""></div>
-                            </div>
-                        </div>
-                        
-                        <div class="message-section clearfix">
-                        	<div class="msg-date">10/10/16</div>
-                            <div class="msg-info-wrap clearfix clearfix">
-                            	<div class="msg-info">
-                                	<div class="in-top clearfix">
-                                    	<div class="like-section">
-                                        	<a href="#">+3</a>
-                                            <a href="#" class="like"><span></span></a>
-                                            <a href="#" class="dislike"><span></span></a>
-                                        </div>
-                                        <div class="msg-name">username</div>
-                                    </div>
-                                    <div class="text-contain">
-                                    	Lorem ipsum dolor sit amet, con - sectetur adipiscing elit. Pellen -
-                                        tesque sit amet enim ac lacus con
-                                    </div>
-                                </div>
-                                <div class="msg-user"><img src="images/tagee_male1.jpg" alt=""></div>
-                            </div>
-                        </div>
-                        
-                    </div><!--sidebar-inner -->
-                    <div class="channel-wrap">
-                        <a href="#">CHANNEL ICON</a>
-                    </div>
-                    <div class="sidebar-bot">
-                    	<input type="text" value="" class="field-comment">
-                    </div>
-                </div><!--sidebar -->
             </div><!--wrap -->
             
             
@@ -410,7 +409,7 @@
 
 <div class="overlay-popup"></div>
 <div class="popup-seciton" id="popup-login">
-	<div class="popup-title">Log-in ! <a href="#" class="login-cancel">x</a></div>
+	<div class="popup-title">Log-in !</div>
     <div class="popup-body">
     	<div class="social-section">
         	<p><a href="#"><img src="images/social-1.png" alt=""></a></p>
@@ -447,23 +446,23 @@
 
 
 <div class="popup-seciton" id="popup-galelry">
-	<div class="popup-title">Choose your Avatar <a href="#" class="login-cancel">x</a></div>
+	<div class="popup-title">Choose your Avatar</div>
     <div class="popup-body">
     	
         <div class="avater-gallery">
         	<ul class="clearfix">
-            	<li><a href="#"><img src="images/tagee_male1.jpg" alt=""></a></li>
+            	<li><a href="#"><img src="images/tagee_woman2b.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/tagee_woman2.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/tagee_male1.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/tagee_woman2.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/tagee_male1.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/tagee_woman2.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/tagee_male1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/tagee_male2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/tagee_male3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/tagee_alien.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/tagee_woman3.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/upload.png" alt=""></a></li>
             </ul>
         </div>
         <div class="avater-btn">
-        	<a href="#"><img src="images/cancel.png" alt=""></a>
+        	<a href="#" class="login-cancel"><img src="images/cancel.png" alt=""></a>
             <a href="#"><img src="images/ok.png" alt=""></a>
         </div>
         
