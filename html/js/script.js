@@ -40,7 +40,24 @@ $(function () {
 	
 	
 // view on dropdown	
+	
+	$('.view').click(function(){
+		if( $(this).hasClass('active') ){
+			$(this).removeClass('active');
+			$(this).next('ul').stop(true,true).slideUp();
+		}
+		else{
+			$(this).addClass('active');
+			$(this).next('ul').stop(true,true).slideDown();
+		}
+		return false;
+	});
+	
 	$('.view-section li a').click(function(){
+		
+		$(this).parents('ul').hide();
+		$(".view").removeClass('active');
+		
 		$(".view-section li a").removeClass('active');
 		$(this).addClass('active');
 		
