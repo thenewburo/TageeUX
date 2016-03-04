@@ -68,4 +68,12 @@ $(function () {
 	});
 	
 	
+	// chanel field from sidebar
+	 $('.field-channel').focus(function() { // Define focus handler
+            $('.channel-field-wrap ul').show();
+      }).blur(function() {
+            $('.channel-field-wrap ul').hide();
+      });
+	
+	
 });
