@@ -1282,7 +1282,7 @@ body .sidebar{
 	top:15%;
 }
 .turn{
-	display:none;
+	margin-left:80px;
 }
 .arrow-right{
 	display:none;

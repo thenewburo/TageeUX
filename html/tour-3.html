@@ -365,8 +365,8 @@
                         
                     </div><!--sidebar-inner -->
                     <div class="channel-wrap">
-                        <a href="#">CHANNEL ICON</a>
-                        <div class="channel-field-wrap">
+                        <a href="#" class="img"><img src="images/channel_03.png" alt="" width="45"></a>
+                        <!--<div class="channel-field-wrap">
                         	<input type="text" value="" class="field-channel">
                             <ul>
                             	<li><a href="#">#channel</a></li>
@@ -375,10 +375,12 @@
                                 <li><a href="#">#channel</a></li>
                                 <li><a href="#">#channel</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="sidebar-bot">
-                    	<input type="text" placeholder="#hashtag" class="field-comment">
+                        <input type="text" value="Type your message" class="field-comment" onFocus="if(this.value=='Type your message') this.value='';" onBlur="if(this.value=='') this.value='Type your message';">
+                        
+                        <img src="images/smile.png" alt="" class="smile">
                     </div>
                 </div><!--sidebar -->
             </div><!--wrap -->
