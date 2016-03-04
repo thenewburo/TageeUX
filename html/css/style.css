@@ -206,6 +206,17 @@ ______________________*/
 			border-bottom:1px solid #fff;
 			display:block;
 		}
+			.view span span{
+				border:none;
+				padding:0;
+				display:inline-block;
+				vertical-align:middle;
+			}
+		.view img{
+			max-width:40px;
+			display:inline-block;
+			vertical-align:middle;
+		}
 	.view-section{
 	}
 		.view-section ul{
