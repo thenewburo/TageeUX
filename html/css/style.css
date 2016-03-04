@@ -226,7 +226,7 @@ ______________________*/
 			top:100%;
 			width:100%;
 			background:#eceded;
-			z-index:9;
+			z-index:1;
 			padding-bottom:10px;
 			-moz-box-shadow: 5px 5px 0 rgba(0,0,0, 0.4);
 			-webkit-box-shadow: 5px 5px 0 rgba(0,0,0, 0.4);
@@ -294,6 +294,15 @@ ______________________*/
 	top:290px;
 	font-size:20px;
 }
+.buble-intro{
+	background:url(../images/turn-0.png) no-repeat;
+	width:700px;
+	height:694px;
+	margin-left:-200px;
+}
+	.buble-intro .buble-inner{
+		padding:55px 0 0 60px;
+	}
 .turn{
 	position:fixed;
 	left:50%;
@@ -554,7 +563,7 @@ body .frame-shadow .frame-img{
 .channel-wrap{
 	position:absolute;
 	left:25px;
-	bottom:80px;
+	bottom:70px;
 }
 	.channel-wrap > a{
 		color:#8e9093;
@@ -567,6 +576,13 @@ body .frame-shadow .frame-img{
 		-moz-border-radius:15px;
 		-webkit-border-radius:15px;
 		border-radius:15px;
+	}
+	.channel-wrap .img{
+		background:none;
+		padding:0;
+		-moz-border-radius:none;
+		-webkit-border-radius:none;
+		border-radius:none;
 	}
 	.channel-field-wrap{
 		display:inline-block;
@@ -616,7 +632,8 @@ body .frame-shadow .frame-img{
 		}
 .sidebar-bot{
 	height:57px;
-	padding:1px 45px 0 15px;
+	padding:1px 65px 0 15px;
+	position:relative;
 }
 	.field-comment{
 		height:50px;
@@ -625,11 +642,20 @@ body .frame-shadow .frame-img{
 		font-size:14px;
 		width:100%;
 		border:none;
+		color:#8e9093;
 		background:rgba(0,0,0, 0.6);
 		background:none;
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
 		box-sizing:border-box;
+	}
+	.smile{
+		position:absolute;
+		right:20px;
+		top:20px;
+		width:25px;
+		background:#fff;
+		padding-left:10px;
 	}
 /* sidebar end  */	
 .slider-wrap{
@@ -824,7 +850,7 @@ body .frame-shadow .frame-img{
 		text-transform:uppercase;
 	}
 .footer-links{
-	padding:10px 0;
+	padding:0 0 10px;
 	text-align:right;
 }
 	.footer-links li{
@@ -832,7 +858,7 @@ body .frame-shadow .frame-img{
 		margin-right:15px;
 	}
 	.footer-links a{
-		color:#9ed5ef;
+		color:#40C0FF;
 		font-size:16px;
 	}
 
@@ -1064,6 +1090,12 @@ body .frame-shadow .frame-img{
 	#footer-wrap img{
 		max-width:400px;
 	}
+	.footer-right{
+		float:right;
+	}
+	.footer-left{
+		float:left;
+	}
 .fl{ float:left}
 .fr{ float:right}
 .cl{ clear:both; font-size:0; height:0; }
@@ -1204,8 +1236,11 @@ body .sidebar{
 		padding:4px 25px 0;
 	}
 	.sidebar-inner{
-		height:318px;
+		height:332px;
 	}
+		.smile{
+			top:64px;
+		}
 	.msg-date{
 		width:66px;
 		font-size:14px;

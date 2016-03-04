@@ -152,7 +152,9 @@
                         </div>
                     </div><!--sidebar-inner -->
                     <div class="sidebar-bot">
-                    	<input type="text" placeholder="#hashtag" class="field-comment">
+                        <input type="text" value="Type your message" class="field-comment" onFocus="if(this.value=='Type your message') this.value='';" onBlur="if(this.value=='') this.value='Type your message';">
+                        
+                        <img src="images/smile.png" alt="" class="smile">
                     </div>
                 </div><!--sidebar -->
                 
@@ -313,46 +315,42 @@
 <!--main end -->
 
 <div class="wrapper-bot">
+    <div class="tags-wrap">
+        <a href="#" class="more-tag">more tagspots</a>
+        <!--<a href="#" class="add"><img src="images/add.png" alt=""></a> -->
+        <div class="content-width">
+            <div class="strip-black">
+                <ul class="clearfix">
+                    <li><a href="#">#fashion</a></li>
+                    <li><a href="#">#friends</a></li>
+                    <li><a href="#">#like4like</a></li>
+                    <li><a href="#">#smile</a></li>
+                    <li><a href="#">#instamood</a></li>
+                    <li><a href="#">#family</a></li>       
+                </ul>
+            </div>
+        </div>
+    </div><!--tags-wrap -->
 
-<div class="tags-wrap">
-	<a href="#" class="more-tag">more tagspots</a>
-    <!--<a href="#" class="add"><img src="images/add.png" alt=""></a> -->
-	<div class="content-width">
-    	<div class="strip-black">
-        	<ul class="clearfix">
-            	<li><a href="#">#fashion</a></li>
-                <li><a href="#">#friends</a></li>
-                <li><a href="#">#like4like</a></li>
-                <li><a href="#">#smile</a></li>
-                <li><a href="#">#instamood</a></li>
-                <li><a href="#">#family</a></li>       
-            </ul>
+
+	<!--footer start -->
+    <div id="footer-wrap">
+        <div class="content-width">
+            <footer id="footer" class="clearfix">
+                <div class="footer-right">
+            		<div class="footer-links">
+                        <ul class="clearfix">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Agreement</a></li>
+                        </ul>
+                    </div>
+            	</div>
+        		<div class="footer-left"><a href="#"><img src="images/footer-logo.png" alt=""></a></div>
+            </footer>
         </div>
     </div>
-</div><!--tags-wrap -->
-
-<div class="content-width">
-    <div class="footer-links">
-    	<ul class="clearfix">
-        	<li><a href="#">Contact</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Agreement</a></li>
-        </ul>
-    </div>
-</div>
-
-
-
-<!--footer start -->
-<div id="footer-wrap">
-	<div class="content-width">
-        <footer id="footer" class="clearfix">
-            <a href="#"><img src="images/footer-logo.png" alt=""></a>
-        </footer>
-    </div>
-</div>
-<!--footer end -->
-
+	<!--footer end -->
 </div>
 
 </div><!--container-fluid -->

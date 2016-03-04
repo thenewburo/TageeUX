@@ -172,8 +172,8 @@
                         
                     </div><!--sidebar-inner -->
                     <div class="channel-wrap">
-                        <a href="#">CHANNEL ICON</a>
-                        <div class="channel-field-wrap">
+                        <a href="#" class="img"><img src="images/channel_03.png" alt="" width="45"></a>
+                        <!--<div class="channel-field-wrap">
                         	<input type="text" value="" class="field-channel">
                             <ul>
                             	<li><a href="#">#channel</a></li>
@@ -182,10 +182,12 @@
                                 <li><a href="#">#channel</a></li>
                                 <li><a href="#">#channel</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="sidebar-bot">
-                    	<input type="text" placeholder="#hashtag" class="field-comment">
+                        <input type="text" value="Type your message" class="field-comment" onFocus="if(this.value=='Type your message') this.value='';" onBlur="if(this.value=='') this.value='Type your message';">
+                        
+                        <img src="images/smile.png" alt="" class="smile">
                     </div>
                 </div><!--sidebar -->
                 
@@ -405,23 +407,21 @@
         </div>
     </div><!--tags-wrap -->
 
-    <div class="content-width">
-        <div class="footer-links">
-            <ul class="clearfix">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Agreement</a></li>
-            </ul>
-        </div>
-    </div>
-
-
 
 	<!--footer start -->
     <div id="footer-wrap">
         <div class="content-width">
             <footer id="footer" class="clearfix">
-                <a href="#"><img src="images/footer-logo.png" alt=""></a>
+                <div class="footer-right">
+            		<div class="footer-links">
+                        <ul class="clearfix">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Agreement</a></li>
+                        </ul>
+                    </div>
+            	</div>
+        		<div class="footer-left"><a href="#"><img src="images/footer-logo.png" alt=""></a></div>
             </footer>
         </div>
     </div>
