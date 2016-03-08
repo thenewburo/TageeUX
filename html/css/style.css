@@ -255,12 +255,12 @@ ______________________*/
 		}
 
 .buble-section,
-.buble-secndary,
+.buble-secondary,
 .buble-tertiary{
 	position:fixed;
 	left:50%;
 	margin-left:0;
-	top:50px;
+	top:35px;
 	background:url(../images/turn-1.png) no-repeat;
 	width:500px;
 	height:496px;
@@ -277,16 +277,16 @@ ______________________*/
 		text-transform:uppercase;
 		font-weight:600;
 		font-size:26px;
-		margin:50px 0 10px;
+		margin:20px 0 10px;
 	}
 	.buble-section span{
 		display:block;
 	}
-.buble-secndary{
+.buble-secondary{
 	margin-left:120px;
 	margin-left:-500px;
 	top:300px;
-	font-size:20px;
+	font-size:16x;
 }
 .buble-tertiary{
 	margin-left:120px;
@@ -564,6 +564,9 @@ body .frame-shadow .frame-img{
 	position:absolute;
 	left:25px;
 	bottom:70px;
+	font-size:14px;
+	color:#666666;
+	font-style: italic;
 }
 	.channel-wrap > a{
 		color:#8e9093;
@@ -1273,9 +1276,9 @@ body .sidebar{
 	.landing-desc .block{
 		display:inline;
 	}
-.buble-secndary{
+.buble-secondary{
 	margin-left:20px;
-	top:45%;
+	top:40%;
 }
 .buble-tertiary{
 	margin-left:-350px;
