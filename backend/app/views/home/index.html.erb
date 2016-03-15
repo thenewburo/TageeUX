@@ -1,0 +1,24 @@
+<% content_for :hero do %>
+  <%= render partial: 'shared/carousel' %>
+<% end %>
+<div class="row medium-up-3 large-up-4 tags">
+  <% tags_and_status_updates(@tags).each do |tag, status_update| %>
+    <div class="column tag">
+      <p class="tag-container">
+        <a data-open="hashtag-modal">
+          <%= media_tag content_type: status_update.content_type, uri: status_update.media_uri %>
+        </a>
+        <% if tag_has_chatters?(tag) %>
+          <%= link_to 'Chat Now', tag_path(tag),
+              class: 'small button chat-now' %>
+        <% end %>
+        <%= button_to 'Report as inappropiate', reported_status_updates_path(status_update_id: status_update.id, reason: 'inappropiate')%>
+        <%= button_to 'Report as duplicate', reported_status_updates_path(status_update_id: status_update.id, reason: 'duplicate')%>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<div class="row column text-center">
+  <a class="button">Load More</a>
+</div>

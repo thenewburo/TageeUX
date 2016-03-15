@@ -1,0 +1,7 @@
+.sticky-container {
+  // By default the sticky-container will have a height of 0 because
+  // its children are position: fixed. This means the rest of the page
+  // needs padding / margin hacks so that the content won't appear underneath
+  // the `fixed` element.
+  height: 125px;
+}

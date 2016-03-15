@@ -1,0 +1,26 @@
+<% content_for :hero do %>
+  <div class="large hero">
+    <div class="row column text-center">
+      <h1>TAGSPOT CHANNEL</h1><br>
+      <h4><%= @tag_category.name %></h4>
+    </div>
+  </div>
+
+<% end %>
+
+<div>
+</div>
+
+<div class="row column"></div>
+<div class="row medium-up-3 large-up-4 tags">
+  <% @status_updates.each do |status_update| %>
+    <div class="column tag">
+      <a data-open="hashtag-modal" data-tag="<%= @tag_category.name %>">
+        <%= media_tag content_type: status_update.content_type, uri: status_update.media_uri %>
+      </a>
+      <%= button_to 'Report as inappropiate', reported_status_updates_path(status_update_id: status_update.id, reason: 'inappropiate')%>
+      <%= button_to 'Report as duplicate', reported_status_updates_path(status_update_id: status_update.id, reason: 'duplicate')%>
+    </div>
+  <% end %>
+</div>
+</div>

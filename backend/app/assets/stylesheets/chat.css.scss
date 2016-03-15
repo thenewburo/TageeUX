@@ -1,0 +1,88 @@
+.chatroom {
+  img.thumbnail {
+    margin-bottom: 0;
+  }
+
+  img.thumbnail.tiny {
+    width: 40px;
+    height: 40px;
+  }
+
+  img.thumbnail.small {
+    width: 80px;
+    height: 80px;
+  }
+
+  img.thumbnail.big {
+    width: 150px;
+    height: 150px;
+  }
+
+  .text.tiny {
+    font-size: 0.75rem;
+  }
+
+  hr.tiny {
+    margin: 0.75rem auto;
+  }
+
+  p.text {
+    margin-bottom: 0;
+  }
+
+  .flow-right {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  .flow-right .thumbnail-container {
+    padding-right: 0;
+  }
+  .flow-right .chat-message {
+    padding-right: 1rem;
+    text-align: right;
+  }
+  .flow-right hr {
+    width: 100%;
+  }
+
+  .messages {
+      height: 450px;
+      overflow-y: scroll;
+  }
+
+  [emoji-form] {
+    position: relative;
+
+    #emojibtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .emoji-wysiwyg-editor {
+      background: white;
+      // Keep text from running into emoji button / char counter
+      padding-right: 6%;
+    }
+
+    .char-count {
+      position: absolute;
+      right: 28px;
+      top: 6px;
+      bottom: 0;
+
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+
+      &.too-many-chars {
+        color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="row column text-center copy orange-text">
+  <h1>JOIN A TAGSPOT!</h1>
+  <p class="lead">Chat and find what everyone is talking about on social media.</p>
+</div>
+
+<div class="large hero">
+  <div id="owl-demo" class="owl-carousel">
+    <% status_update_count = Hash.new(0) %>
+    <% tags_and_status_updates(conversation_tags.limit(10)).shuffle.each do |tag, status_update| %>
+      <% next if status_update.content_type == "video" %>
+      <% next if status_update_count[tag.id] >= 3 %>
+      <% status_update_count[tag.id] = status_update_count[tag.id] + 1 %>
+      <div class="item">
+        <p class="tag-container">
+          <%= media_tag content_type: status_update.content_type, uri: status_update.media_uri %>
+          <%= button_to 'Report as inappropiate', reported_status_updates_path(status_update_id: status_update.id, reason: 'inappropiate')%>
+          <%= button_to 'Report as duplicate', reported_status_updates_path(status_update_id: status_update.id, reason: 'duplicate')%>
+          <% if tag_has_chatters?(tag) %>
+            <%= link_to 'Chat Now', tag_path(tag),
+                class: 'small button chat-now' %>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

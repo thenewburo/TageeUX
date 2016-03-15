@@ -1,0 +1,60 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">
+        <%= link_to "Tagee", root_url %>
+      </li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <% if logged_in? %>
+        welcome,
+        <%= current_user.screen_name %>
+          <% if is_admin? %>
+            <%= link_to 'Tag Categories', :tag_categories %> |
+              <% end %>
+                <% services = (%w(twitter instagram facebook) - current_user.services.map(&:provider)).each do |type| %>
+                  <a href="/auth/<%= type %>">link <%= type %></a> |
+                  <% end %>
+                    <%= link_to 'logout', :session, method: :delete %>
+                      <% end %>
+                        <li><a href="#">Favorite</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Tagspot Channels</a></li>
+                        <li><a href="#">Tagee</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-6 columns medium-push-6">
+
+    <label>Explore</label>
+    <input type="text" id="middle-label" placeholder="Search">
+  </div>
+  <div class="medium-6 columns medium-pull-6">
+
+    <label>Filter
+      <%= form_tag tags_path, method: :get do %>
+        <%= select_tag "network", options_for_select(%w(twitter instagram facebook), @network), include_blank: true, onchange: 'this.form.submit();' %>
+          <% end %>
+    </label>
+
+  </div>
+</div>
+
+<hr>
+<%= yield %>
+  <hr>
+
+  <div class="row column">
+    <ul class="menu">
+      <li><a href="#">Favorite</a></li>
+      <li><a href="#">Sports</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">Tagspot Channels</a></li>
+      <li><a href="#">Tagee</a></li>
+    </ul>
+  </div>

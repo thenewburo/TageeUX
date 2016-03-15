@@ -1,0 +1,321 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tagee - It's not just a hashtag... It's a converstaion</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path "ico/apple-touch-icon-144-precomposed.png" %>">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path "ico/apple-touch-icon-114-precomposed.png" %>">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path "ico/apple-touch-icon-72-precomposed.png" %>">
+  <link rel="apple-touch-icon-precomposed" href="<%= image_path "ico/apple-touch-icon-57-precomposed.png" %>">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Cloud Typography Fonts -->
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7929494/6170752/css/fonts.css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <!-- used to display media in pop-up -->
+  <div class="reveal collapse" id="hashtag-modal" data-reveal>
+    <div class="content">
+      <img src="https://placekitten.com/1920/1280" alt="Intropsective Cage">
+    </div>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div data-sticky-container="" class="sticky-container">
+    <div data-btm-anchor="destroy:bottom" data-top-anchor="setup" data-margin-bottom="0" data-margin-top="0" data-sticky="rbfh1r-sticky" style="width: 100%;  margin-top: 0em; top: 0px; bottom: auto;" id="sticky-magellan" class="sticky is-at-top is-stuck"
+    data-resize="sticky-magellan" data-events="resize">
+      <div class="sticky-mag stuck-mag" data-magellan="3c5pva-magellan" data-resize="ui168x-magellan" data-scroll="ui168x-magellan" id="ui168x-magellan" data-events="resize">
+
+        <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title" data-tooltip aria-haspopup="true"
+            title=" Get tagged &nbsp; see all the latest viral memes, images and videos trending on social media.">
+            <%= link_to root_url, class: 'logo' do %>
+              <%= image_tag "tagee_logo.png", width: 120 %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="top-bar" id="realEstateMenu">
+          <div class="top-bar-left">
+            <ul class="menu" data-responsive-menu="accordion">
+              <li class="menu-text hide-for-portrait"
+                data-tooltip aria-haspopup="true"
+                title=" Get tagged &nbsp; see all the latest viral memes, images and videos trending on social media.">
+                <%= link_to root_url, class: 'logo' do %>
+                  <%= image_tag "tagee_logo.png" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <br>
+          <div class="top-bar-right">
+            <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
+
+              <li class="has-submenu">
+                <a href="#" data-tooltip aria-haspopup="true" class="left"
+                  title="Find the most popular trending chatrooms.">
+                  Top TAGSpots
+                </a>
+                <ul class="submenu menu vertical scrollable" data-submenu>
+                  <% tagspot_tags(20).each do |tag| %>
+                  <li>
+                    <%= link_to tag_path(tag) do %>
+                      <%= "##{tag.title}" %> <%= "(#{tag.tag_category.name})" if tag.tag_category%>
+                    <% end %>
+                  </li>
+                  <% end %>
+                </ul>
+              </li>
+              <li class="has-submenu"><a href="#">Tagspot Channels</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <% TagCategory.all.each do |tag_category| %>
+                    <li><%= link_to tag_category.name, tag_category %></li>
+                  <% end %>
+                </ul>
+              </li>
+              <% if @active_users %>
+              <li class="has-submenu">
+                <a href="#" data-tooltip aria-haspopup="true" class="left"
+                  title="Whose online chatting in TAGSPOTS.">
+                  Tagees
+                </a>
+                <ul class="submenu menu vertical tagee-menu scrollable" data-submenu>
+                  <% @active_users.each do |user| %>
+                  <% tag = user.last_active_tag %>
+                  <li>
+                    <%= link_to "@#{user.screen_name} > ##{tag.title} ",
+                        tag_path(user.last_active_tag) %>
+                  </li>
+                  <% end %>
+                </ul>
+              </li>
+              <% end %>
+              <% if current_user %>
+                <li class="has-submenu">
+                  <a href="#">
+                    You've been Tagged... <%= current_user.screen_name %>
+                  </a>
+                  <ul class="submenu menu vertical" data-submenu>
+                    <!--
+                    <% services = (%w(twitter instagram facebook) - current_user.services.map(&:provider)).each do |type| %>
+                      <li><a href="/auth/<%= type %>">link <%= type %></a></li>
+                    <% end %>
+                    -->
+                    <li>
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                    </li>
+                  </ul>
+                </li>
+                <% if is_admin? %>
+                  <li>
+                    <%= link_to 'Tag Categories', :tag_categories %>
+                  </li>
+                <% end %>
+              <% else %>
+                <li>
+                  <a href="#" data-open="login_signup"
+                    data-tooltip aria-haspopup="true" class="left"
+                    title="Chat now in a TAGSPOT!">
+                    Login / Log-out
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="news_feed trending_bg">
+          <ul id="ticker01">
+            <% ticker_tags(25).each do |tag| %>
+              <li>
+                <%= link_to tag_path(tag) do %>
+                  <%= "##{tag.title}" %>
+                <% end %>
+                <span>&nbsp;</span>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <%= yield :hero %>
+
+
+  <br>
+  <% unless @tag.present? %>
+  <div class="row">
+
+    <div class="medium-6 columns medium-push-6">
+      <label data-tooltip aria-haspopup="true"
+        title=" See what's being tagged.">
+        Explore
+      </label>
+      <div class="row collapse">
+        <%= form_tag search_tags_path, method: :get do %>
+        <div class="input-group">
+          <span class="input-group-label">#</span>
+          <%= text_field_tag :tag, params[:tag],
+            class: "input-group-field", placeholder: "Search Hashtags",
+            style: "width: 50%; display: inline-block" %>
+          <button class="button input-group-field" style="display: inline-block">
+            Search
+          </button>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <!--
+    <div class="medium-4 columns medium-pull-6">
+      <div class="network-filters">
+        <label>Filter
+          <%= form_tag url_for, method: :get do %>
+            <%= select_tag "network", options_for_select(%w(twitter instagram facebook), @network), include_blank: "Show all media", onchange: 'this.form.submit();' %>
+          <% end %>
+        </label>
+      </div>
+    </div>
+    -->
+
+  </div>
+  <% end %>
+  <hr />
+  <%= yield %>
+  <footer>
+    <div class="row column">
+      <br>
+      <ul class="dropdown vertical medium-horizontal menu">
+        <li class="float-left">
+          <%= image_tag 'tagee_logo_footer.png', width: 400 %>
+        </li>
+        <li class="float-right"><a href="#">Privacy Agreement</a></li>
+        <li class="float-right"><a href="#">Terms of Service</a></li>
+        <li class="float-right"><a href="#">Support</a></li>
+        <li class="float-right"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <br>
+  </footer>
+
+
+
+  <div class="reveal collapse" id="login_signup" data-reveal>
+    <ul class="tabs" data-tabs id="example-tabs">
+      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Login</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="example-tabs">
+      <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="tabs-panel is-active" id="panel1">
+        <div class="media-object">
+          <div class="media-object-section">
+            <img src="//placeimg.com/200/200/people">
+          </div>
+          <div class="media-object-section">
+            <p class="lead">Get Tagged into the conversation</p>
+            <div class="row">
+              <div class="small secondary expanded button-group">
+                <a href="/auth/twitter" class="button">Twitter</a>
+                <a href="/auth/instagram" class="button">Instagram</a>
+                <a href="/auth/facebook" class="button">Facebook</a>
+                <%= link_to 'Log in', new_user_session_path, class: 'button' %>
+                <%= link_to 'Sign up', new_user_registration_path, class: 'button' %>
+              </div>
+              <div class="row">
+                <% unless signed_in?%>
+                  <%= form_for(@user || User.new, as: :user, url: registration_path(:user)) do |f| %>
+
+                    <div class="field">
+                      <%= f.label :email %><br />
+                      <%= f.email_field :email, autofocus: true %>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :password %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                      <% end %><br />
+                      <%= f.password_field :password, autocomplete: "off" %>
+                    </div>
+
+                    <div class="field">
+                      <%= f.label :date_of_birth %><br />
+                      <%= f.date_select :date_of_birth, { order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 10, end_year: Date.today.year - 100}, {required: true} %>
+                    </div>
+
+                    <div class="field">
+                      <span>Gender</span>
+                      <%= f.label :gender_male, 'Male' %>
+                      <%= f.radio_button :gender, 'male' %><br />
+                      <%= f.label :gender_female, 'Female' %>
+                      <%= f.radio_button :gender, 'female' %><br />
+                    </div>
+
+                    <div class="actions">
+                      <%= f.submit "Sign up" %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small reveal" id="hashtag_modal" data-reveal>
+        <img class="button" type="button" data-toggle="example-dropdown" src="//placekitten.com/1920/1280" alt="Intropsective Cage">
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+          Would you like to enter this TAGSPOT?
+          <div class="expanded button-group">
+            <a class="button">Yes</a>
+            <a class="button">No</a>
+          </div>
+        </div>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+
+          $("#owl-demo").owlCarousel({
+
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+            items: 4,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3]
+
+          });
+
+        });
+      </script>
+      <!-- must be on bottom, or breaks carousel -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.js"></script>
+      <script>
+        $(document).ready(function() {
+          $(document).foundation();
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<% @categories.each do |category| %>
+
+  <h2><%= category.name %></h2>
+
+  <% category.tags.each do |tag| %>
+    <div style="margin-bottom: 5px; display: inline-block;">
+      <%= link_to tag_path(tag), class: 'btn btn-primary' do %>
+        <%= "##{tag.title}" %> <%= "(#{tag.tag_category.name})" if tag.tag_category %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if category.tags.empty? %>
+    <em>No tags yet</em>
+  <% end %>
+
+  <hr/>
+
+<% end %>
+
+<%= link_to 'New Category', [:new, :tag_category], class: 'btn btn-primary' %>

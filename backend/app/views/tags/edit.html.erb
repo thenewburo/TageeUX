@@ -1,0 +1,7 @@
+<%= form_for @tag do |f| %>
+
+  <%= f.select :tag_category_id, TagCategory.all.map { |tc| [tc.name, tc.id] } %>
+
+  <%= f.submit %>
+
+<% end %>

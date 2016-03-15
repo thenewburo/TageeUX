@@ -1,0 +1,31 @@
+.big-ticker ul.ticker {
+  a {
+    color: #dd5a19;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+
+.big-ticker .tickercontainer {
+  height: auto;
+}
+
+.big-ticker .tickercontainer .mask {
+  left: 0;
+  top: 0;
+}
+
+.big-ticker .tickercontainer li {
+  float: none;
+}
+
+#ticker01 {
+  float: none;
+  width: 4000px !important;
+
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
