@@ -99,16 +99,16 @@ body{
 	width:100%;
 	z-index:9;
 }
-/*
+
 .wrapper-bot{
-	background:#0D97D6;
+	/*background:#0D97D6;*/
 	position:fixed;
 	left:0;
 	bottom:0;
 	width:100%;
 	z-index:99;
 }
-*/
+
 body .sidebar{
 	position: fixed;
 	margin-right: -524px;
@@ -446,7 +446,7 @@ body .frame-shadow .frame-img{
 	float:right;
 	width:618px;
 	background:url(../images/sidebar.png) no-repeat;
-	height:802px;
+	height:2000px;
 	position:relative;
 }
 .sidebar{
@@ -637,6 +637,8 @@ body .frame-shadow .frame-img{
 	height:57px;
 	padding:1px 65px 0 15px;
 	position:relative;
+	/*position:fixed !important;
+	bottom :0;*/
 }
 	.field-comment{
 		height:50px;
@@ -1131,6 +1133,7 @@ body .frame-shadow .frame-img{
 body .sidebar{
 	width:500px;
 	margin-right:-532px;
+	height: 1200px;
 }
 	.msg-info{
 		width:235px;
@@ -1194,7 +1197,7 @@ body{
 }
 #wrapper,
 .wrapper-bot{
-	position:static;
+
 }
 .contents{
 	float:none;
